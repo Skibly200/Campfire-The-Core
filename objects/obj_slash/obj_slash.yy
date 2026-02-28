@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite4",
-    "path":"sprites/Sprite4/Sprite4.yy",
+    "name":"slash_img",
+    "path":"sprites/slash_img/slash_img.yy",
   },
   "spriteMaskId":null,
   "visible":true,

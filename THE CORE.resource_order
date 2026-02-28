@@ -25,8 +25,8 @@
     {"name":"plyr_rise","order":27,"path":"sprites/plyr_rise/plyr_rise.yy",},
     {"name":"plyr_run","order":13,"path":"sprites/plyr_run/plyr_run.yy",},
     {"name":"plyr_slash","order":24,"path":"sprites/plyr_slash/plyr_slash.yy",},
+    {"name":"slash_img","order":12,"path":"sprites/slash_img/slash_img.yy",},
     {"name":"Sprite3","order":8,"path":"sprites/Sprite3/Sprite3.yy",},
-    {"name":"Sprite4","order":12,"path":"sprites/Sprite4/Sprite4.yy",},
     {"name":"Sprite8","order":17,"path":"sprites/Sprite8/Sprite8.yy",},
   ],
 }
