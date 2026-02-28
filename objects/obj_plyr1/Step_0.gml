@@ -18,7 +18,6 @@ else if xsp<0
 if(xsp<=0.15 && xsp>=-0.15)
 {
 	xsp=0;
-	sprite_index=plyr_idle
 }
 if keyboard_check(ord("D")){
 	direction=0
@@ -38,6 +37,10 @@ else if keyboard_check(ord("A")){
 	}
 	sprite_index=plyr_run
 }
+else
+{
+	sprite_index=plyr_idle	
+}
 if place_meeting(x,y+1,obj_wall)
 {
 	ysp=0
@@ -45,6 +48,10 @@ if place_meeting(x,y+1,obj_wall)
 	{
 		ysp=-4.5
 	}
+}
+if place_meeting(x,y,obj_wall)
+{
+	yspd=-1	
 }
 
 if place_meeting(x+1,y,obj_wall)
