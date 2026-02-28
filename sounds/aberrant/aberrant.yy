@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"aberrant",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":40.30839,
+  "exportDir":"",
+  "name":"aberrant",
+  "parent":{
+    "name":"THE CORE",
+    "path":"THE CORE.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"aberrant.wav",
+  "volume":1.0,
+}
