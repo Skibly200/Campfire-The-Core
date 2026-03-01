@@ -1,0 +1,12 @@
+hp=30
+jump_timer=0
+cutscene_timer=180
+jump_pos=0
+shoot=false
+jump_dist=0
+xsp=0;ysp=0
+webdir=0
+hurt=0
+dead=false
+audio_play_sound(spi_scream,20,false)
+deadtime=300;

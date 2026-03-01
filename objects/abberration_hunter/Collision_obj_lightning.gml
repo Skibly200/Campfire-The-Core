@@ -1,0 +1,9 @@
+if(hurt<1)
+{
+	if(other.direction==0){
+	xsp+=3}
+	else{
+	xsp-=3}
+	hp-=10
+	hurt=30
+}

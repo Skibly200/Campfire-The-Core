@@ -1,0 +1,1 @@
+image_xscale = obj_gelatinous.image_xscale

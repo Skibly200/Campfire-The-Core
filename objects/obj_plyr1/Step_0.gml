@@ -41,7 +41,7 @@ else
 {
 	sprite_index=plyr_idle	
 }
-if place_meeting(x,y+1,obj_wall)
+if place_meeting(x,y+ysp,obj_wall)
 {
 	ysp=0
 	if keyboard_check(ord("W"))
@@ -79,7 +79,7 @@ else if !place_meeting(x,y+1,obj_wall)
 
 slash-=1
 
-if slash<1 && keyboard_check(vk_space)
+if slash<1 && keyboard_check(vk_space) && !hurt>0
 {
 	instance_create_layer(x,y,"Instances",obj_slash);
 	slash=45
@@ -89,10 +89,42 @@ if slash>30
 	sprite_index=plyr_slash
 }
 
+if global.lightning && global.mana>=1 && cast<1 && keyboard_check(vk_right)
+{
+	cast=30
+	cast_sprite=plyr_cast
+	global.mana-=1
+	instance_create_layer(x,y,"Instances",obj_lightning);
+}
+if global.fireball && global.mana>=2 && cast<1 && keyboard_check(vk_down)
+{
+	ysp=-4
+	cast=30
+	global.mana-=2
+	cast_sprite=plyr_castdown
+	audio_play_sound(snd_fireball,10,false)
+	instance_create_layer(x,y,"Instances",obj_fireball);
+	firedir=270
+	instance_create_layer(x,y,"Instances",obj_fireball);
+	firedir=285
+	instance_create_layer(x,y,"Instances",obj_fireball);
+	firedir=255
+}
+if cast>0
+{
+	cast--
+	sprite_index=cast_sprite
+}
 if hurt>0
 {
 	hurt--
 	sprite_index=plyr_hurt
+}
+
+if(webtime>0){
+	xsp*=0.65
+	webtime--
+	sprite_index=plyr_web
 }
 
 move_and_collide(xsp,ysp,obj_wall);
@@ -101,6 +133,7 @@ if y>room_height
 {
 	room_goto_next()	
 }
+
 
 if global.hp<=0
 {
