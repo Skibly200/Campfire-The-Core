@@ -41,14 +41,6 @@ else
 {
 	sprite_index=plyr_idle	
 }
-if place_meeting(x,y+ysp,obj_wall)
-{
-	ysp=0
-	if keyboard_check(ord("W"))
-	{
-		ysp=-4.5
-	}
-}
 if place_meeting(x,y,obj_wall)
 {
 	yspd=-1	
@@ -61,6 +53,14 @@ if place_meeting(x+1,y,obj_wall)
 if place_meeting(x-1,y,obj_wall)
 {
 	x+=1	
+}
+if place_meeting(x,y+max(0,ysp),obj_wall)
+{
+	ysp=0
+	if keyboard_check(ord("W"))
+	{
+		ysp=-4.5
+	}
 }
 
 if ysp>1

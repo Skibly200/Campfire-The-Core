@@ -1,2 +1,2 @@
-x -= xspd * image_xscale
+x += xspd * image_xscale
 image_angle += rspd
